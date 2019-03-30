@@ -1,6 +1,7 @@
 package controller;
 
 import Do.LoginDo;
+import Strings.menuString;
 import Utils.JsonUtils;
 
 import com.alibaba.fastjson.JSON;
@@ -12,6 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 
 @Controller
@@ -37,6 +41,7 @@ public class indexController  {
         String password=userJson.getString("password");
 
         String responseData=LoginDo.checkUser(username,password);
+
         //response action
         System.out.println(responseData);
         OutputStream outputStream=response.getOutputStream();
@@ -46,6 +51,24 @@ public class indexController  {
         outputStream.write(dataByteArr);
 
     }
+    @RequestMapping("/getFeatureList")
+    public void getFeatureList(HttpServletRequest request,HttpServletResponse response) throws Exception{
+    //根据身份获取功能
+        response.setCharacterEncoding("UTF-8");
+        System.out.println("request Method:"+request.getMethod());
+        int indentity=Integer.parseInt(request.getParameter("indentity"));
+        System.out.println("indentity request: "+indentity);
+
+        String str= menuString.getMenu(indentity);
+        System.out.println(str);
+
+        OutputStream outputStream=response.getOutputStream();
+        response.setHeader("content-type","text/html;charset=UTF-8");
+        response.setStatus(200);
+        byte[] dataByteArr=str.getBytes("UTF-8");
+        outputStream.write(dataByteArr);
+    }
+
 
 
 

@@ -2,6 +2,7 @@ package Do;
 
 import Strings.ResponseStrings;
 import Utils.SqlSessionFactoryUtils;
+import com.alibaba.fastjson.JSON;
 import model.User;
 
 import org.apache.ibatis.session.SqlSession;
@@ -13,7 +14,7 @@ public class LoginDo {
 
     public static  void main(String[] argc) throws IOException{
 
-
+//testMain
         SqlSession session= SqlSessionFactoryUtils.getSession();
         User usernew=new User();
         usernew.setUsername("rjm");
@@ -40,7 +41,12 @@ public class LoginDo {
         User user=session.selectOne("checkUser",loginUser);
         if (user!=null){
             System.out.println(user.getName()+"login");
-            return ResponseStrings.LOGIN_SUCCESS;
+            loginUser.setPassword("");
+            loginUser.setIdentity(user.getIdentity());
+            loginUser.setName(user.getName());
+            String resStr= JSON.toJSONString(loginUser);
+            System.out.println(resStr);
+            return resStr;
         }else{
             System.out.println("Username or Password Wrong!");
             return ResponseStrings.LOGIN_FAILED;
