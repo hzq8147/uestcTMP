@@ -51,15 +51,25 @@ public class indexController  {
         outputStream.write(dataByteArr);
 
     }
+    @RequestMapping("/register")
+    public void register(HttpServletRequest request,HttpServletResponse response)throws  Exception{
+        //注册接口
+        response.setCharacterEncoding("UTF-8");
+        System.out.println("request Method:"+request.getMethod());
+        String jsonstring=JsonUtils.getRequestPostStr(request);
+        System.out.println(jsonstring);
+
+
+    }
     @RequestMapping("/getFeatureList")
     public void getFeatureList(HttpServletRequest request,HttpServletResponse response) throws Exception{
     //根据身份获取功能
         response.setCharacterEncoding("UTF-8");
         System.out.println("request Method:"+request.getMethod());
-        int indentity=Integer.parseInt(request.getParameter("indentity"));
-        System.out.println("indentity request: "+indentity);
+        String identity=request.getParameter("identity");
+        System.out.println("identity request: "+identity);
 
-        String str= menuString.getMenu(indentity);
+        String str= menuString.getMenu(identity);
         System.out.println(str);
 
         OutputStream outputStream=response.getOutputStream();

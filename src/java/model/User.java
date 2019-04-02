@@ -3,7 +3,7 @@ package model;
 public class User {
     private  int id;
     private String name;
-    private int identity;
+    private String identity;
     private String username;
     private String password;
 
@@ -23,11 +23,11 @@ public class User {
         this.name = name;
     }
 
-    public int getIdentity() {
+    public String getIdentity() {
         return identity;
     }
 
-    public void setIdentity(int identity) {
+    public void setIdentity(String identity) {
         this.identity = identity;
     }
 

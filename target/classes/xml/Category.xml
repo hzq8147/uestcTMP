@@ -24,4 +24,9 @@
     <select id="listUser" resultType="User">
             select * from   user
         </select>
+
+    <select id="listCourse" resultType="Course">
+        select * from Course
+    </select>
+
 </mapper>

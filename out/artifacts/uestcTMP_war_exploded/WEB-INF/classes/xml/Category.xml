@@ -24,4 +24,11 @@
     <select id="listUser" resultType="User">
             select * from   user
         </select>
+
+    <select id="listCourse" resultType="Course">
+        select * from Course
+    </select>
+    <select id="getCourseByTeacherId" parameterType=""resultType="Course">
+        select * from Course where
+    </select>
 </mapper>

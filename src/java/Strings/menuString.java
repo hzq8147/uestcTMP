@@ -13,24 +13,25 @@ public class menuString {
 
     public static void main(String argc[]) {
 
-        String string=getMenu(1);
+        String string=getMenu("2");
+        System.out.println(string);
     }
-    public static String getMenu(int identity){
+    public static String getMenu(String identity){
 
         switch(identity){
-            case 1:
+            case "1":
                 menu=getTeacherMenu();
                 break;
-            case 2:
+            case "2":
                 menu=getResponsibleMemberMenu();
                 break;
-            case 3:
+            case "3":
                 menu=getResponsibleLeaderMenu();
                 break;
-            case 4:
+            case "4":
                 menu=getAdministrationMenu();
                 break;
-            case 5:
+            case "5":
                 menu=getDeanMenu();
                 break;
         }
