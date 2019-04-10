@@ -16,19 +16,29 @@ public class LoginDo {
 
 //testMain
         SqlSession session= SqlSessionFactoryUtils.getSession();
-        User usernew=new User();
-        usernew.setUsername("rjm");
-        usernew.setPassword("123123");
-        checkUser("rjm","123123");
+//        User usernew=new User();
+//        usernew.setUsername("hzq8147");
+//        usernew.setPassword("hzqhzq");
+        checkUser("hzq8147","hzqhzq");
 //        User usernew=new User();
 //        usernew.setName("lxy");
 //        insertUser(session,usernew);
-        listAll(session);
+        //listAll(session);
+        getUser(1);
 
         session.commit();
         session.close();
     }
+    public static User getUser(int Userid){
+        SqlSession session= SqlSessionFactoryUtils.getSession();
+        User findUser=new User();
+        findUser.setId(Userid);
 
+        User user=session.selectOne("getUser",findUser);
+        System.out.println(user.getName());
+        user.setPassword("");
+        return user;
+    }
     public static String checkUser(String username,String password){
         //登录检测
 
@@ -40,11 +50,10 @@ public class LoginDo {
 
         User user=session.selectOne("checkUser",loginUser);
         if (user!=null){
+            System.out.println(user.getId()+"id");
             System.out.println(user.getName()+"login");
-            loginUser.setPassword("");
-            loginUser.setIdentity(user.getIdentity());
-            loginUser.setName(user.getName());
-            String resStr= JSON.toJSONString(loginUser);
+            user.setPassword("");
+            String resStr= JSON.toJSONString(user);
             System.out.println(resStr);
             return resStr;
         }else{

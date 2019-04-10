@@ -12,7 +12,7 @@
             delete from user where id= #{id}
         </delete>
 
-    <select id="getUser" parameterType="_int" resultType="User">
+    <select id="getUser" parameterType="User" resultType="User">
             select * from   user  where id= #{id}
         </select>
     <select id="checkUser" parameterType="User" resultType="User">
@@ -25,8 +25,12 @@
             select * from   user
         </select>
 
+
     <select id="listCourse" resultType="Course">
         select * from Course
+    </select>
+    <select id="getCourse" parameterType="User" resultType="Course">
+        select * from Course where TeacherId=#{id}
     </select>
 
 </mapper>

@@ -1,7 +1,9 @@
 package Do;
 
 import Utils.SqlSessionFactoryUtils;
+import com.alibaba.fastjson.JSON;
 import model.Course;
+import model.User;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
@@ -12,8 +14,20 @@ public class CourseDo {
     //test Get Course
         SqlSession sqlSession= SqlSessionFactoryUtils.getSession();
 
-        listAll(sqlSession);
+      getCourse(1);
 
+    }
+    public static String getCourse(int UserID){
+
+        SqlSession session= SqlSessionFactoryUtils.getSession();
+
+        User user=new User();
+        user.setId(UserID);
+        List<Course> courseList=session.selectList("getCourse",user);
+
+        String resStr= JSON.toJSONString(courseList);
+
+        return resStr;
     }
     public static void listAll(SqlSession sqlSession){
         List<Course> coursesList=sqlSession.selectList("listCourse");
