@@ -43,18 +43,29 @@ public class indexController  {
 
         String username = userJson.getString("username");
         String password=userJson.getString("password");
+        String identity=userJson.getString("identity");
+
         String responseData="";
         User user=LoginDo.checkUser(username,password);
+        JSONObject resJson=new JSONObject();
         if (user!=null){
             System.out.println(user.getName()+"login");
-            user.setPassword("");
-            String resStr= JSON.toJSONString(user);
-            System.out.println(resStr);
-            responseData=resStr;
+            String userIdentiy=user.getIdentity();
+            int stat=userIdentiy.indexOf(identity);
+            if (stat==-1){
+                //登录身份有误
+                resJson.put("errId","-1");
+            }else{
+                //登陆成功
+                user.setIdentity(identity);//设置为登录身份
+                resJson.put("errId","1");
+                resJson.put("user",user);
+            }
         }else{
-            System.out.println("Username or Password Wrong!");
-            responseData=ResponseStrings.LOGIN_FAILED;
+            //工号或密码错误
+            resJson.put("errId","0");
         }
+        responseData= JSON.toJSONString(resJson);
 
         //response action
         System.out.println(responseData);
