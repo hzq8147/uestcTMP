@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba883424-5525-45a6-90dd-d2bda0808cf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/java/Utils/WechatLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/Do/LoginDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Do/LoginDo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/controller/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/controller/indexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/xml/Category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/xml/Category.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,8 +47,6 @@
                 <element signature="e#256#257#0" expanded="true" />
                 <element signature="e#300#301#0" expanded="true" />
                 <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/controller/indexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+            <state relative-caret-position="372">
+              <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/java/xml/Category.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -83,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/java/Strings/menuString.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="452">
-              <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+              <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -121,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Do/CourseDo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="377">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Do/LoginDo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+            <state relative-caret-position="855">
+              <caret line="96" column="37" lean-forward="true" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Utils/WechatLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="705">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -244,7 +238,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -363,6 +356,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,7 +367,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554977374613" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555053400591" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -888,11 +882,12 @@
       <workItem from="1554810909337" duration="34000" />
       <workItem from="1554884222749" duration="8208000" />
       <workItem from="1554945511781" duration="8851000" />
+      <workItem from="1555049760304" duration="2928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99831000" />
+    <option name="totallyTimeSpent" value="102759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -905,8 +900,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="955" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49479166" visible="true" weight="0.26434678" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49479166" visible="true" weight="0.26739928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Palette&#9;" order="3" />
@@ -919,21 +915,21 @@
       <window_info anchor="bottom" id="Java Enterprise" order="2" sideWeight="0.4993895" weight="0.32857144" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3293556" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4981685" weight="0.21666667" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4969475" visible="true" weight="0.21666667" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.39880952" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32857144" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50183153" side_tool="true" visible="true" weight="0.21666667" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50305253" side_tool="true" visible="true" weight="0.21666667" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3297619" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4993895" weight="0.32814372" />
       <window_info anchor="bottom" id="Spring" order="13" sideWeight="0.4993895" weight="0.3293556" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.3293556" />
-      <window_info anchor="bottom" id="File Transfer" order="17" sideWeight="0.4993895" weight="0.3297619" />
+      <window_info anchor="bottom" id="File Transfer" order="17" sideWeight="0.498779" weight="0.3297619" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info active="true" anchor="right" id="Ant Build" order="1" visible="true" weight="0.24969475" />
+      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.24969475" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" />
@@ -1111,31 +1107,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/model/menuSecond.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="804" column="16" selection-start-line="804" selection-start-column="16" selection-end-line="804" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Strings/menuString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Strings/ResponseStrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1148,8 +1123,6 @@
             <element signature="e#256#257#0" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
             <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1157,14 +1130,38 @@
     <entry file="file://$PROJECT_DIR$/src/java/xml/Category.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/model/menuSecond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Strings/ResponseStrings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Utils/WechatLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/Do/CourseDo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="377">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1181,20 +1178,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Do/LoginDo.java">
+    <entry file="file://$PROJECT_DIR$/src/java/Strings/menuString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="452">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Utils/WechatLogin.java">
+    <entry file="file://$PROJECT_DIR$/src/java/Do/LoginDo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="855">
+          <caret line="96" column="37" lean-forward="true" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1203,8 +1197,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/controller/indexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        <state relative-caret-position="372">
+          <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

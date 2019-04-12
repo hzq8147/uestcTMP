@@ -40,6 +40,7 @@ public class LoginDo {
         if (user!=null) {
             System.out.println(user.getName());
             user.setPassword("");
+            user.setOpenId("");
             return user;
         }
         return null;
@@ -53,6 +54,7 @@ public class LoginDo {
         if (user!=null) {
             System.out.println(user.getName());
             user.setPassword("");
+            user.setOpenId("");
             return user;
         }
         return  null;
@@ -65,7 +67,7 @@ public class LoginDo {
         findUser.setId(UserId);
         findUser.setOpenId(openId);
 
-        int a=    session.update("updateOpenid",findUser);
+        int a=session.update("updateOpenid",findUser);
         System.out.println(a);
         session.commit();
         session.close();
@@ -83,6 +85,7 @@ public class LoginDo {
         if (user!=null) {
             System.out.println(user.getName());
             user.setPassword("");
+            user.setOpenId("");
             return user;
         }
         return  null;
