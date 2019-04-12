@@ -11,7 +11,12 @@
     <delete id="deleteUser" parameterType="User" >
             delete from user where id= #{id}
         </delete>
-
+    <select id="getUserByOpenid" parameterType="User" resultType="User">
+        select * from user where openid=#{openId}
+    </select>
+    <update id="updateOpenid" parameterType="User" >
+        update user set openid=#{openId} where id=#{id}
+    </update>
     <select id="getUser" parameterType="User" resultType="User">
             select * from   user  where id= #{id}
         </select>

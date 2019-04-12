@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSON;
 import model.User;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.test.context.jdbc.Sql;
 
 import java.io.IOException;
 import java.util.List;
@@ -19,27 +20,57 @@ public class LoginDo {
 //        User usernew=new User();
 //        usernew.setUsername("hzq8147");
 //        usernew.setPassword("hzqhzq");
-        checkUser("hzq8147","hzqhzq");
+       // checkUser("hzq8147","hzqhzq");
 //        User usernew=new User();
 //        usernew.setName("lxy");
 //        insertUser(session,usernew);
         //listAll(session);
-        getUser(1);
+     //   getUser(2);
+        updateOpenid(1,"");
 
         session.commit();
         session.close();
     }
-    public static User getUser(int Userid){
+    public static User getUserByOpenid(String openid){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        User findUser=new User();
+        findUser.setOpenId(openid);
+
+        User user=session.selectOne("getUserByOpenid",findUser);
+        if (user!=null) {
+            System.out.println(user.getName());
+            user.setPassword("");
+            return user;
+        }
+        return null;
+    }
+    public static User getUserByid(int Userid){
         SqlSession session= SqlSessionFactoryUtils.getSession();
         User findUser=new User();
         findUser.setId(Userid);
 
         User user=session.selectOne("getUser",findUser);
-        System.out.println(user.getName());
-        user.setPassword("");
-        return user;
+        if (user!=null) {
+            System.out.println(user.getName());
+            user.setPassword("");
+            return user;
+        }
+        return  null;
+
     }
-    public static String checkUser(String username,String password){
+    public static void updateOpenid(int UserId,String openId){
+        //更新openid
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        User findUser=new User();
+        findUser.setId(UserId);
+        findUser.setOpenId(openId);
+
+        int a=    session.update("updateOpenid",findUser);
+        System.out.println(a);
+        session.commit();
+        session.close();
+    }
+    public static User checkUser(String username,String password){
         //登录检测
 
         User loginUser=new User();
@@ -49,17 +80,13 @@ public class LoginDo {
         SqlSession session= SqlSessionFactoryUtils.getSession();
 
         User user=session.selectOne("checkUser",loginUser);
-        if (user!=null){
-            System.out.println(user.getId()+"id");
-            System.out.println(user.getName()+"login");
+        if (user!=null) {
+            System.out.println(user.getName());
             user.setPassword("");
-            String resStr= JSON.toJSONString(user);
-            System.out.println(resStr);
-            return resStr;
-        }else{
-            System.out.println("Username or Password Wrong!");
-            return ResponseStrings.LOGIN_FAILED;
+            return user;
         }
+        return  null;
+
 
     }
     private static void listAll(SqlSession session){

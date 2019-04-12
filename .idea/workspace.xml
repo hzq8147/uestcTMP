@@ -7,19 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba883424-5525-45a6-90dd-d2bda0808cf2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/java/Utils/WechatLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/Do/CourseDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/Do/CourseDo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/Do/LoginDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/Do/LoginDo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/controller/CourseScoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/controller/CourseScoreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/xml/Category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/uestcTMP/WEB-INF/classes/xml/Category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/Do/CourseDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Do/CourseDo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/Do/LoginDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/Do/LoginDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/controller/CourseScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/controller/CourseScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/controller/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/controller/indexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/xml/Category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/xml/Category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Do/CourseDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Do/CourseDo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Do/LoginDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Do/LoginDo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CourseScoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CourseScoreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/xml/Category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xml/Category.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,9 +44,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+            <state relative-caret-position="120">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding>
+                <element signature="e#227#228#0" expanded="true" />
+                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#336#337#0" expanded="true" />
                 <element signature="e#444#445#0" expanded="true" />
                 <element signature="e#475#476#0" expanded="true" />
               </folding>
@@ -61,29 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/Do/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/xml/Category.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/controller/indexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="35" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="201">
+              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,10 +71,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/xml/Category.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Strings/menuString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+            <state relative-caret-position="452">
+              <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -121,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/controller/CourseScoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="449">
               <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Do/CourseDo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="122">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,8 +133,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Do/LoginDo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-41">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="353">
+              <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/Utils/WechatLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="623">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -207,13 +207,14 @@
         <option value="$PROJECT_DIR$/src/java/model/menuFirst.java" />
         <option value="$PROJECT_DIR$/src/java/model/Course.java" />
         <option value="$PROJECT_DIR$/src/java/Do/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/java/controller/indexController.java" />
         <option value="$PROJECT_DIR$/src/java/Strings/menuString.java" />
+        <option value="$PROJECT_DIR$/src/java/controller/CourseScoreController.java" />
+        <option value="$PROJECT_DIR$/src/java/Do/CourseDo.java" />
+        <option value="$PROJECT_DIR$/src/java/Utils/WechatLogin.java" />
         <option value="$PROJECT_DIR$/src/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/java/xml/Category.xml" />
         <option value="$PROJECT_DIR$/src/java/Do/LoginDo.java" />
-        <option value="$PROJECT_DIR$/src/java/controller/CourseScoreController.java" />
-        <option value="$PROJECT_DIR$/src/java/Do/CourseDo.java" />
+        <option value="$PROJECT_DIR$/src/java/controller/indexController.java" />
       </list>
     </option>
   </component>
@@ -243,6 +244,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -361,7 +363,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,11 +373,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554896888765" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554977374613" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28390804" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -431,6 +432,20 @@
       <option name="MAIN_CLASS_NAME" value="Do.LoginDo" />
       <module name="uestcTMP" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WechatLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Utils.WechatLogin" />
+      <module name="uestcTMP" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -821,12 +836,14 @@
       <item itemvalue="Application.LoginDo" />
       <item itemvalue="Application.menuString" />
       <item itemvalue="Application.CourseDo" />
+      <item itemvalue="Application.WechatLogin" />
       <item itemvalue="Tomcat Server.aliyunWeb" />
       <item itemvalue="Tomcat Server.aliyunserver" />
       <item itemvalue="Tomcat Server.local" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WechatLogin" />
         <item itemvalue="Application.CourseDo" />
         <item itemvalue="Application.menuString" />
       </list>
@@ -869,12 +886,13 @@
       <workItem from="1554482027894" duration="234000" />
       <workItem from="1554651219357" duration="747000" />
       <workItem from="1554810909337" duration="34000" />
-      <workItem from="1554884222749" duration="7783000" />
+      <workItem from="1554884222749" duration="8208000" />
+      <workItem from="1554945511781" duration="8851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90555000" />
+    <option name="totallyTimeSpent" value="99831000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -886,9 +904,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1680" height="955" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="955" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49479166" visible="true" weight="0.26129428" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49479166" visible="true" weight="0.26434678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Palette&#9;" order="3" />
@@ -901,12 +919,12 @@
       <window_info anchor="bottom" id="Java Enterprise" order="2" sideWeight="0.4993895" weight="0.32857144" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3293556" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4981685" visible="true" weight="0.30952382" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4981685" weight="0.21666667" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.39880952" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32857144" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50061053" side_tool="true" weight="0.3297619" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50183153" side_tool="true" visible="true" weight="0.21666667" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3297619" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4993895" weight="0.32814372" />
       <window_info anchor="bottom" id="Spring" order="13" sideWeight="0.4993895" weight="0.3293556" />
@@ -915,7 +933,7 @@
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.3293556" />
       <window_info anchor="bottom" id="File Transfer" order="17" sideWeight="0.4993895" weight="0.3297619" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.24969475" />
+      <window_info active="true" anchor="right" id="Ant Build" order="1" visible="true" weight="0.24969475" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" />
@@ -1086,10 +1104,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Do/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/model/menuSecond.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="804" column="16" selection-start-line="804" selection-start-column="16" selection-end-line="804" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Strings/menuString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1102,9 +1141,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding>
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
             <element signature="e#444#445#0" expanded="true" />
             <element signature="e#475#476#0" expanded="true" />
           </folding>
@@ -1113,39 +1156,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/xml/Category.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="255">
+          <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Do/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/java/Do/CourseDo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Do/LoginDo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Strings/menuString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/controller/indexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="35" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state relative-caret-position="122">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1154,7 +1173,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/controller/CourseScoreController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
+        <state relative-caret-position="449">
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1162,10 +1181,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Do/CourseDo.java">
+    <entry file="file://$PROJECT_DIR$/src/java/Do/LoginDo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="353">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Utils/WechatLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/controller/indexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1231,6 +1270,7 @@
             <option name="proportions">
               <list>
                 <option value="0.28390804" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

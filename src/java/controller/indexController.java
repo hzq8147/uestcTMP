@@ -1,14 +1,18 @@
 package controller;
 
 import Do.LoginDo;
+import Strings.ResponseStrings;
 import Strings.menuString;
 import Utils.JsonUtils;
 
+import Utils.WechatLogin;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import sun.rmi.runtime.Log;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,8 +43,18 @@ public class indexController  {
 
         String username = userJson.getString("username");
         String password=userJson.getString("password");
-
-        String responseData=LoginDo.checkUser(username,password);
+        String responseData="";
+        User user=LoginDo.checkUser(username,password);
+        if (user!=null){
+            System.out.println(user.getName()+"login");
+            user.setPassword("");
+            String resStr= JSON.toJSONString(user);
+            System.out.println(resStr);
+            responseData=resStr;
+        }else{
+            System.out.println("Username or Password Wrong!");
+            responseData=ResponseStrings.LOGIN_FAILED;
+        }
 
         //response action
         System.out.println(responseData);
@@ -61,6 +75,68 @@ public class indexController  {
 
 
     }
+    @RequestMapping("/loginWechat")
+    public void loginWechat(HttpServletRequest request,HttpServletResponse response)throws  Exception{
+        //微信登录
+        response.setCharacterEncoding("UTF-8");
+
+        String jsonString=JsonUtils.getRequestPostStr(request);
+        JSONObject jsonObj=JSON.parseObject(jsonString);
+        String userCode=jsonObj.getString("code");
+
+        String openid=WechatLogin.getOpenId(userCode);
+        User user=LoginDo.getUserByOpenid(openid);
+        JSONObject jsonObject=new JSONObject();
+
+        if (user!=null){
+            jsonObject.put("user",user);
+            jsonObject.put("errId","1");
+        }else{
+            jsonObject.put("errId","0");
+        }
+        String resStr=JSON.toJSONString(jsonObject);
+        System.out.println(resStr);
+
+        OutputStream outputStream=response.getOutputStream();
+        response.setHeader("content-type","text/html;charset=UTF-8");
+        response.setStatus(200);
+        byte[] dataByteArr=resStr.getBytes("UTF-8");
+        outputStream.write(dataByteArr);
+    }
+    @RequestMapping("/regWechat")
+    public void RegWechat(HttpServletRequest request,HttpServletResponse response)throws  Exception{
+        //微信注册（用户名密码登录）
+        response.setCharacterEncoding("UTF-8");
+
+        String jsonString=JsonUtils.getRequestPostStr(request);
+        JSONObject jsonObj=JSON.parseObject(jsonString);
+        String username=jsonObj.getString("username");
+        String password=jsonObj.getString("password");
+        String userCode=jsonObj.getString("code");
+
+        JSONObject jsonObject=new JSONObject();
+        User user=LoginDo.checkUser(username,password);
+        if (user!=null)
+        {
+            String openid=WechatLogin.getOpenId(userCode);
+            jsonObject.put("errId","1");//注册成功
+            jsonObject.put("user",user);
+            //保存openid
+            LoginDo.updateOpenid(user.getId(),openid);
+
+        }else{
+            jsonObject.put("errId","0");//注册失败
+        }
+        String resStr=JSON.toJSONString(jsonObject);
+        System.out.println(resStr);
+
+        OutputStream outputStream=response.getOutputStream();
+        response.setHeader("content-type","text/html;charset=UTF-8");
+        response.setStatus(200);
+        byte[] dataByteArr=resStr.getBytes("UTF-8");
+        outputStream.write(dataByteArr);
+    }
+
     @RequestMapping("/getFeatureList")
     public void getFeatureList(HttpServletRequest request,HttpServletResponse response) throws Exception{
     //根据身份获取功能
