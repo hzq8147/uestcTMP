@@ -29,10 +29,14 @@
     <select id="listUser" resultType="User">
             select * from   user
         </select>
-
-
+    <select id="selectJiangGaoResult" parameterType="int" resultType="JiangGaoResult">
+        select * from Course_JiangGao where CourseId=#{CourseId}
+    </select>
+    <select id="selectOneCourse" parameterType="int" resultType="Course">
+        select * from Course where CourseId=#{CourseId}
+    </select>
     <select id="listCourse" resultType="Course">
-        select * from Course
+        select * from Course order by Term desc
     </select>
     <select id="getCourse" parameterType="User" resultType="Course">
         select * from Course where TeacherId=#{id}

@@ -50,8 +50,8 @@ public class indexController  {
         JSONObject resJson=new JSONObject();
         if (user!=null){
             System.out.println(user.getName()+"login");
-            String userIdentiy=user.getIdentity();
-            int stat=userIdentiy.indexOf(identity);
+            String userIdentity=user.getIdentity();
+            int stat=userIdentity.indexOf(identity);
             if (stat==-1){
                 //登录身份有误
                 resJson.put("errId","-1");

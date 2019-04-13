@@ -34,4 +34,22 @@ public class CourseScoreController {
         outputStream.write(dataByteArr);
 
     }
+    @RequestMapping("/getJiangGaoResult")
+    public void getJiangGaoResult(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        response.setCharacterEncoding("UTF-8");
+        String jsonstring=JsonUtils.getRequestPostStr(request);
+        JSONObject jsonObj=JSON.parseObject(jsonstring);
+        String courseId=jsonObj.getString("courseId");
+
+        String resStr= CourseDo.getJiangGaoResult(Integer.parseInt(courseId));
+
+        System.out.println(resStr);
+
+        OutputStream outputStream=response.getOutputStream();
+        response.setHeader("content-type","text/html;charset=UTF-8");
+        response.setStatus(200);
+        byte[] dataByteArr=resStr.getBytes("UTF-8");
+        outputStream.write(dataByteArr);
+
+    }
 }
