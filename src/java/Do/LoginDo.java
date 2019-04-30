@@ -21,13 +21,11 @@ public class LoginDo {
 //        usernew.setUsername("hzq8147");
 //        usernew.setPassword("hzqhzq");
        // checkUser("hzq8147","hzqhzq");
-//        User usernew=new User();
-//        usernew.setName("lxy");
-//        insertUser(session,usernew);
         //listAll(session);
      //   getUser(2);
-        updateOpenid(1,"");
-
+       // updateOpenid(1,"");
+        // insertUser("lxy","1234","2,3","小飞飞","信软","讲师");
+       // System.out.println(checkReg("rjm1"));
         session.commit();
         session.close();
     }
@@ -103,8 +101,40 @@ public class LoginDo {
             System.out.println(us.getPassword());
         }
     }
-    private static void insertUser(SqlSession session,User usernew){
+    public static int checkReg(String username){
+        //检查用户名是否重复
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        User user=new User();
+        user.setUsername(username);
+
+        User userOne=session.selectOne("checkReg",user);
+        if (userOne!=null){
+            return 0;
+        }else {
+            return 1;
+        }
+
+    }
+    public static String insertUser(String username,String password,String identity,String name,String xueYuan,String zhiCheng){
         //注册用户
-        session.insert("addUser",usernew);
+        SqlSession session= SqlSessionFactoryUtils.getSession();
+        if (checkReg(username)==1) {
+            User usernew = new User();
+            usernew.setUsername(username);
+
+            usernew.setPassword(password);
+            usernew.setIdentity(identity);
+            usernew.setName(name);
+            usernew.setOpenId("");
+            usernew.setXueYuan(xueYuan);;
+            usernew.setZhiCheng(zhiCheng);
+
+            session.insert("addUser", usernew);
+            session.commit();
+            session.close();
+            return "1";
+        }else{
+            return "0";
+        }
     }
 }

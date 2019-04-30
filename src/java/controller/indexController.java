@@ -80,11 +80,28 @@ public class indexController  {
     public void register(HttpServletRequest request,HttpServletResponse response)throws  Exception{
         //注册接口
         response.setCharacterEncoding("UTF-8");
-        System.out.println("request Method:"+request.getMethod());
         String jsonstring=JsonUtils.getRequestPostStr(request);
-        System.out.println(jsonstring);
 
+        JSONObject jsonObj=JSON.parseObject(jsonstring);
+        String username=jsonObj.getString("username");
+        String password=jsonObj.getString("password");
+        String identity=jsonObj.getString("identity");
+        String xueYuan=jsonObj.getString("xueYuan");
+        String zhiCheng=jsonObj.getString("zhiCheng");
+        String name=jsonObj.getString("name");
 
+        String errId=LoginDo.insertUser(username,password,identity,name,xueYuan,zhiCheng);
+        JSONObject jsonObject=new JSONObject();
+
+        jsonObject.put("errId",errId);//errId=1时注册成功 =0时注册失败，用户名已经存在
+        String resStr=JSON.toJSONString(jsonObject);
+        System.out.println(resStr);
+
+        OutputStream outputStream=response.getOutputStream();
+        response.setHeader("content-type","text/html;charset=UTF-8");
+        response.setStatus(200);
+        byte[] dataByteArr=resStr.getBytes("UTF-8");
+        outputStream.write(dataByteArr);
     }
     @RequestMapping("/loginWechat")
     public void loginWechat(HttpServletRequest request,HttpServletResponse response)throws  Exception{
@@ -157,7 +174,6 @@ public class indexController  {
         System.out.println("identity request: "+identity);
 
         String str= menuString.getMenu(identity);
-        System.out.println(str);
 
         OutputStream outputStream=response.getOutputStream();
         response.setHeader("content-type","text/html;charset=UTF-8");

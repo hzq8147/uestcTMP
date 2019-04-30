@@ -7,6 +7,24 @@ public class User {
     private String username;
     private String password;
     private String openId;
+    private String zhiCheng;
+    private String xueYuan;
+
+    public String getZhiCheng() {
+        return zhiCheng;
+    }
+
+    public void setZhiCheng(String zhiCheng) {
+        this.zhiCheng = zhiCheng;
+    }
+
+    public String getXueYuan() {
+        return xueYuan;
+    }
+
+    public void setXueYuan(String xueYuan) {
+        this.xueYuan = xueYuan;
+    }
 
     public String getOpenId() {
         return openId;
