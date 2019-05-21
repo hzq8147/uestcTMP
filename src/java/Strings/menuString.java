@@ -63,7 +63,7 @@ public class menuString {
             case "教师评价结果":
                 firTmp.setName("教师评价结果");
                 menusec.add(addSec("教师教学过程评价","getCourseList.html"));
-                menusec.add(addSec("教师教学成效评价","upload.html"));
+                menusec.add(addSec("教师教学成效评价","teachingEffect.html"));
                 menusec.add(addSec("教师教学质量评价","upload.html"));
                 break;
             case "课程组质量分析":

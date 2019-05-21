@@ -10,30 +10,6 @@ public class User {
     private String zhiCheng;
     private String xueYuan;
 
-    public String getZhiCheng() {
-        return zhiCheng;
-    }
-
-    public void setZhiCheng(String zhiCheng) {
-        this.zhiCheng = zhiCheng;
-    }
-
-    public String getXueYuan() {
-        return xueYuan;
-    }
-
-    public void setXueYuan(String xueYuan) {
-        this.xueYuan = xueYuan;
-    }
-
-    public String getOpenId() {
-        return openId;
-    }
-
-    public void setOpenId(String openId) {
-        this.openId = openId;
-    }
-
     public int getId() {
         return id;
     }
@@ -72,5 +48,29 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
+
+    public String getZhiCheng() {
+        return zhiCheng;
+    }
+
+    public void setZhiCheng(String zhiCheng) {
+        this.zhiCheng = zhiCheng;
+    }
+
+    public String getXueYuan() {
+        return xueYuan;
+    }
+
+    public void setXueYuan(String xueYuan) {
+        this.xueYuan = xueYuan;
     }
 }

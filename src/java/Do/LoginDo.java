@@ -78,7 +78,6 @@ public class LoginDo {
         loginUser.setPassword(password);
 
         SqlSession session= SqlSessionFactoryUtils.getSession();
-
         User user=session.selectOne("checkUser",loginUser);
         if (user!=null) {
             System.out.println(user.getName());
