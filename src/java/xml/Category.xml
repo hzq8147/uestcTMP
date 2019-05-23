@@ -43,6 +43,60 @@
     <select id="selectJiaoAnResult" parameterType="int" resultType="JiaoAnResult">
         select * from Course_JiaoAn where CourseId=#{CourseId}
     </select>
+	
+	
+	
+	
+	
+	<insert id="insertJiaoAnResult" parameterType="JiaoAnResult">
+        insert into Course_JiaoAn ( CourseId,no1Answer,no1Text,no2Answer,no2Text,no3Answer,no3Text,no4Answer,no4Text,no5Answer,no5Text,no6Answer,no6Text,no7Answer,no7Text,no8Answer,no8Text,xinkeAnswer,jiaoanAnswer,zongtiAnswer) values (#{CourseId},#{no1Answer},#{no1Text},#{no2Answer},#{no2Text},#{no3Answer},#{no3Text},#{no4Answer},#{no4Text},#{no5Answer},#{no5Text},#{no6Answer},#{no6Text},#{no7Answer},#{no7Text},#{no8Answer},#{no8Text},#{xinkeAnswer},#{jiaoanAnswer},#{zongtiAnswer})
+    </insert>
+	
+	<update id="insertJiaoAnResultscore" parameterType="Course">
+        update Course set JiaoAnScore=#{JiaoAnScore} where CourseId=#{courseId}
+    </update>
+	<insert id="insertjianggaoResult" parameterType="JiangGaoResult">
+        insert into Course_JiangGao ( CourseId,no1Answer,no1Text,no2Answer,no2Text,no3Answer,no3Text) values (#{CourseId},#{no1Answer},#{no1Text},#{no2Answer},#{no2Text},#{no3Answer},#{no3Text})
+    </insert>
+	<update id="insertjianggaoResultscore" parameterType="Course">
+        update Course set JiangGaoScore=#{JiangGaoScore} where CourseId=#{courseId}
+    </update>
+	<insert id="insertzhongqiResult" parameterType="ZhongQiResult">
+        insert into Course_ZhongQi ( CourseId,dayiAnswer,buzhiAnswer,pigaiAnswer,chuqinAnswer) values (#{CourseId},#{dayiAnswer},#{buzhiAnswer},#{pigaiAnswer},#{chuqinAnswer})
+    </insert>
+	<update id="insertzhongqiResultscore" parameterType="Course">
+        update Course set ZhongQiScore=#{ZhongQiScore} where CourseId=#{courseId}
+    </update>
+	<insert id="insertzhuanjiaResult" parameterType="ZhuanJiaResult">
+        insert into Course_ZhuanJia ( CourseId,no1Answer,no2Answer,no3Answer,no4Answer,no5Answer,no6Answer,no7Answer,advice) values (#{CourseId},#{no1Answer},#{no2Answer},#{no3Answer},#{no4Answer},#{no5Answer},#{no6Answer},#{no7Answer},#{advice})
+    </insert>
+	<update id="insertzhuanjiaResultscore" parameterType="Course">
+        update Course set TingKeScore=#{TingKeScore} where CourseId=#{courseId}
+    </update>
+	<insert id="insertchutiResult" parameterType="ChuTiResult">
+        insert into Course_ChuTi ( CourseId,chooseAnswer,advice) values (#{CourseId},#{chooseAnswer},#{advice})
+    </insert>
+	<update id="insertchutiResultscore" parameterType="Course">
+        update Course set ChuTiScore=#{ChuTiScore} where CourseId=#{courseId}
+    </update>
+	<insert id="insertpingyueResult" parameterType="PingYueResult">
+        insert into Course_PingYue ( CourseId,chooseAnswer,advice) values (#{CourseId},#{chooseAnswer},#{advice})
+    </insert>
+	<update id="insertpingyueResultscore" parameterType="Course">
+        update Course set PingYueScore=#{PingYueScore} where CourseId=#{courseId}
+    </update>
+	<insert id="insertfenxiResult" parameterType="FenXiResult">
+        insert into Course_FenXi ( CourseId,chooseAnswer,advice) values (#{CourseId},#{chooseAnswer},#{advice})
+    </insert>
+	<update id="insertfenxiResultscore" parameterType="Course">
+        update Course set BaoGaoScore=#{BaoGaoScore} where CourseId=#{courseId}
+    </update>
+	
+	
+	
+	
+	
+	
     <select id="selectZhuanJiaResult" parameterType="int" resultType="ZhuanJiaResult">
         select * from Course_ZhuanJia where CourseId=#{CourseId}
     </select>
@@ -77,4 +131,24 @@
         select * from Course where TeacherId=#{id} order by Term desc
     </select>
 
+
+    <select id="findLectureNoteFile" parameterType="int" resultType="Files">
+        select * from File_LectureNote where courseId=#{courseId}
+    </select>
+    <insert id="insertLectureNoteFile" parameterType="Files">
+        insert  into File_LectureNote (courseId,fileName,name,date,size) values(#{courseId},#{fileName},#{name},#{date},#{size})
+    </insert>
+    <update id="updateLectureNoteFile" parameterType="Files">
+        update File_LectureNote set fileName=#{fileName},name=#{name},date=#{date},size=#{size} where courseId=#{courseId}
+    </update>
+
+    <select id="findLessonPlanFile" parameterType="int" resultType="Files">
+        select * from File_LessonPlan where courseId=#{courseId}
+    </select>
+    <insert id="insertLessonPlanFile" parameterType="Files">
+        insert  into File_LessonPlan (courseId,fileName,name,date,size) values(#{courseId},#{fileName},#{name},#{date},#{size})
+    </insert>
+    <update id="updateLessonPlanFile" parameterType="Files">
+        update File_LessonPlan set fileName=#{fileName},name=#{name},date=#{date},size=#{size} where courseId=#{courseId}
+    </update>
 </mapper>

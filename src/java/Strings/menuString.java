@@ -56,9 +56,8 @@ public class menuString {
         switch (name){
             case "课程材料":
                 firTmp.setName("课程材料");
-                menusec.add(addSec("课件上传","login.html"));
-                menusec.add(addSec("教案上传","upload.html"));
-                menusec.add(addSec("讲义上传","upload.html"));
+                menusec.add(addSec("讲稿上传","lectureNote.html"));
+                menusec.add(addSec("教案上传","lessonPlan.html"));
                 break;
             case "教师评价结果":
                 firTmp.setName("教师评价结果");
@@ -86,11 +85,11 @@ public class menuString {
                 break;
             case "我的任务1":
                 firTmp.setName("我的任务");
-                menusec.add(addSec("我的检查任务","upload.html"));
+                menusec.add(addSec("我的检查任务","checkTask.html"));
                 break;
             case "我的任务2":
                 firTmp.setName("我的任务");
-                menusec.add(addSec("我的检查任务","upload.html"));
+                menusec.add(addSec("我的检查任务","checkTask.html"));
                 menusec.add(addSec("任务分配","upload.html"));
                 menusec.add(addSec("任务完成进度","upload.html"));
                 break;

@@ -43,6 +43,202 @@ public class CourseDo {
         String resStr=JSON.toJSONString(jsonObj);
         return resStr;
     }
+	
+	
+	
+	
+	
+	
+	
+	public static String postjianggaoResult(int courseId,String no1Answer,String no1Text,String no2Answer,String no2Text,String no3Answer,String no3Text,int score){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        JiangGaoResult result=new JiangGaoResult();
+        result.setCourseId(courseId);
+		result.setNo1Answer(no1Answer);
+		result.setNo1Text(no1Text);
+		result.setNo2Answer(no2Answer);
+		result.setNo2Text(no2Text);
+		result.setNo3Answer(no3Answer);
+		result.setNo3Text(no3Text);
+		Course course=new Course();
+		course.setJiangGaoScore(score);
+		course.setCourseId(courseId);
+        session.insert("insertjianggaoResult", result);
+		session.insert("insertjianggaoResultscore", course);
+		session.commit();
+        session.close();
+        JSONObject jsonObj=new JSONObject();
+		jsonObj.put("result",1);
+		String resStr=JSON.toJSONString(jsonObj);
+
+        
+        return resStr;
+    }
+	public static String postzhongqiResult(int courseId,String dayiAnswer,String buzhiAnswer,String pigaiAnswer,String chuqinAnswer,int score){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        ZhongQiResult result=new ZhongQiResult();
+        result.setCourseId(courseId);
+		result.setDayiAnswer(dayiAnswer);
+		result.setBuzhiAnswer(buzhiAnswer);
+		result.setPigaiAnswer(pigaiAnswer);
+		result.setChuqinAnswer(chuqinAnswer);
+		
+		Course course=new Course();
+		course.setZhongQiScore(score);
+		course.setCourseId(courseId);
+        session.insert("insertzhongqiResult", result);
+		session.insert("insertzhongqiResultscore", course);
+		session.commit();
+        session.close();
+        JSONObject jsonObj=new JSONObject();
+		jsonObj.put("result",1);
+		String resStr=JSON.toJSONString(jsonObj);
+
+        
+        return resStr;
+    }
+	public static String postzhuanjiaResult(int courseId,String no1Answer,String no2Answer,String no3Answer,String no4Answer,String no5Answer,String no6Answer,String no7Answer,String advice,int score){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        ZhuanJiaResult result=new ZhuanJiaResult();
+        result.setCourseId(courseId);
+		result.setNo1Answer(no1Answer);
+		result.setNo2Answer(no2Answer);
+		result.setNo3Answer(no3Answer);
+		result.setNo4Answer(no4Answer);
+		result.setNo5Answer(no5Answer);
+		result.setNo6Answer(no6Answer);
+		result.setNo7Answer(no7Answer);
+		result.setAdvice(advice);
+		
+		
+		Course course=new Course();
+		course.setTingKeScore(score);
+		course.setCourseId(courseId);
+        session.insert("insertzhuanjiaResult", result);
+		session.insert("insertzhuanjiaResultscore", course);
+		session.commit();
+        session.close();
+        JSONObject jsonObj=new JSONObject();
+		jsonObj.put("result",1);
+		String resStr=JSON.toJSONString(jsonObj);
+
+        
+        return resStr;
+    }
+	public static String postchutiResult(int courseId,String no1Answer,String no2Answer,String no3Answer,String no4Answer,String no5Answer,String no6Answer,String no7Answer,String no8Answer,String no9Answer,String no10Answer,String advice,int score){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        ChuTiResult result=new ChuTiResult();
+        result.setCourseId(courseId);
+		result.setChooseAnswer(no1Answer+','+no2Answer+','+no3Answer+','+no4Answer+','+no5Answer+','+no6Answer+','+no7Answer+','+no8Answer+','+no9Answer+','+no10Answer);
+		
+		result.setAdvice(advice);
+		
+		
+		Course course=new Course();
+		course.setChuTiScore(score);
+		course.setCourseId(courseId);
+        session.insert("insertchutiResult", result);
+		session.insert("insertchutiResultscore", course);
+		session.commit();
+        session.close();
+        JSONObject jsonObj=new JSONObject();
+		jsonObj.put("result",1);
+		String resStr=JSON.toJSONString(jsonObj);
+
+        
+        return resStr;
+    }
+	public static String postpingyueResult(int courseId,String no1Answer,String no2Answer,String no3Answer,String no4Answer,String no5Answer,String advice,int score){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        PingYueResult result=new PingYueResult();
+        result.setCourseId(courseId);
+		result.setChooseAnswer(no1Answer+','+no2Answer+','+no3Answer+','+no4Answer+','+no5Answer);
+		
+		result.setAdvice(advice);
+		
+		
+		Course course=new Course();
+		course.setPingYueScore(score);
+		course.setCourseId(courseId);
+        session.insert("insertpingyueResult", result);
+		session.insert("insertpingyueResultscore", course);
+		session.commit();
+        session.close();
+        JSONObject jsonObj=new JSONObject();
+		jsonObj.put("result",1);
+		String resStr=JSON.toJSONString(jsonObj);
+
+        
+        return resStr;
+    }
+	public static String postfenxiResult(int courseId,String no1Answer,String no2Answer,String no3Answer,String no4Answer,String no5Answer,String advice,int score){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        FenXiResult result=new FenXiResult();
+        result.setCourseId(courseId);
+		result.setChooseAnswer(no1Answer+','+no2Answer+','+no3Answer+','+no4Answer+','+no5Answer);
+		
+		result.setAdvice(advice);
+		
+		
+		Course course=new Course();
+		course.setBaoGaoScore(score);
+		course.setCourseId(courseId);
+        session.insert("insertfenxiResult", result);
+		session.insert("insertfenxiResultscore", course);
+		session.commit();
+        session.close();
+        JSONObject jsonObj=new JSONObject();
+		jsonObj.put("result",1);
+		String resStr=JSON.toJSONString(jsonObj);
+
+        
+        return resStr;
+    }
+	public static String postjiaoanResult(int courseId,String xinkeAnswer,String jiaoanAnswer,String no1Answer,String no1Text,String no2Answer,String no2Text,String no3Answer,String no3Text,String no4Answer,String no4Text,String no5Answer,String no5Text,String no6Answer,String no6Text,String no7Answer,String no7Text,String no8Answer,String no8Text,String zongtiAnswer,int score){
+        SqlSession session=SqlSessionFactoryUtils.getSession();
+        JiaoAnResult result=new JiaoAnResult();
+		result.setCourseId(courseId);
+		result.setXinkeAnswer(xinkeAnswer);
+		result.setJiaoanAnswer(jiaoanAnswer);
+		result.setNo1Answer(no1Answer);
+		result.setNo1Text(no1Text);
+		result.setNo2Answer(no2Answer);
+		result.setNo2Text(no2Text);
+		result.setNo3Answer(no3Answer);
+		result.setNo3Text(no3Text);
+		result.setNo4Answer(no4Answer);
+		result.setNo4Text(no4Text);
+		result.setNo5Answer(no5Answer);
+		result.setNo5Text(no5Text);
+		result.setNo6Answer(no6Answer);
+		result.setNo6Text(no6Text);
+		result.setNo7Answer(no7Answer);
+		result.setNo7Text(no7Text);
+		result.setNo8Answer(no8Answer);
+		result.setNo8Text(no8Text);
+		result.setZongtiAnswer(zongtiAnswer);
+		Course course=new Course();
+		course.setJiaoAnScore(score);
+		course.setCourseId(courseId);
+		session.insert("insertJiaoAnResult", result);
+		session.insert("insertJiaoAnResultscore", course);
+		session.commit();
+        session.close();
+        JSONObject jsonObj=new JSONObject();
+		jsonObj.put("result",1);
+		String resStr=JSON.toJSONString(jsonObj);
+
+        
+        return resStr;
+    }
+	
+	
+	
+	
+	
+	
+	
+	
     public static String getJiaoAnResult(int CourseId){
         SqlSession session=SqlSessionFactoryUtils.getSession();
         JiaoAnResult result=session.selectOne("selectJiaoAnResult",CourseId);
